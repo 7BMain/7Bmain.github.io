@@ -8,91 +8,70 @@
       margin: 0;
       font-family: Arial;
       color: white;
-      overflow-x: hidden;
-
       background: #1b1b2f;
+      overflow-x: hidden;
     }
 
-    /* ❄️ SNOW EFFECT */
+    /* ❄️ snow */
     .snowflake {
       position: fixed;
       top: -10px;
       color: white;
-      font-size: 1em;
       animation: fall linear infinite;
-      opacity: 0.8;
     }
 
     @keyframes fall {
-      to {
-        transform: translateY(100vh);
-      }
+      to { transform: translateY(100vh); }
     }
 
     h1 {
       text-align: center;
-      padding: 15px;
       color: #00bfff;
       text-shadow: 0 0 10px #00bfff;
     }
 
     .homebtn {
-      display: block;
-      width: 120px;
-      margin: auto;
-      padding: 10px;
-      background: #007bff;
-      color: white;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #007bff;
-    }
-
-    .timer {
-      text-align: center;
-      margin: 10px;
+      display:block;
+      width:120px;
+      margin:auto;
+      padding:10px;
+      background:#007bff;
+      color:white;
+      text-align:center;
+      border-radius:8px;
+      text-decoration:none;
+      box-shadow:0 0 10px #007bff;
     }
 
     .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      padding: 20px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:20px;
+      padding:20px;
     }
 
     .day {
-      background: rgba(0,0,0,0.5);
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,123,255,0.3);
+      background:rgba(0,0,0,0.5);
+      padding:15px;
+      border-radius:12px;
     }
 
-    .day h2 {
-      text-align: center;
-      color: #00bfff;
-    }
+    .day h2 { color:#00bfff; text-align:center; }
 
     .lesson {
-      background: #007bff;
-      margin: 8px 0;
-      padding: 10px;
-      border-radius: 8px;
-      font-size: 14px;
-      transition: 0.3s;
+      background:#007bff;
+      margin:6px 0;
+      padding:8px;
+      border-radius:8px;
     }
 
-    .lesson a {
-      color: white;
-      font-weight: bold;
-    }
+    .lesson a { color:white; font-weight:bold; }
 
-    .active {
-      background: #00c853 !important;
-    }
-
-    .next {
-      background: #ff9800 !important;
+    .break {
+      background:#444;
+      padding:6px;
+      border-radius:6px;
+      text-align:center;
     }
   </style>
 </head>
@@ -100,109 +79,86 @@
 <body>
 
 <h1>📅 7B Timetable ❄️</h1>
-
 <a class="homebtn" href="index.html">🏠 Home</a>
-
-<div class="timer" id="countdown">Loading...</div>
 
 <div class="container">
 
-  <!-- MON / TUE -->
+  <!-- MON TUE -->
   <div class="day">
     <h2>Monday & Tuesday</h2>
 
-    <div class="lesson" data-start="07:45" data-end="07:55">
-      Morning Check-in 7:45-7:55<br>
-      <a href="https://meet.google.com/pse-eozg-hcx" target="_blank">Join</a>
-    </div>
+    <div class="lesson">7:45-7:55 Morning Check-in<br><a href="https://meet.google.com/pse-eozg-hcx">Join</a></div>
+    <div class="lesson">7:55-8:35 English<br><a href="https://meet.google.com/ien-iwbs-sfd">Join</a></div>
 
-    <div class="lesson" data-start="07:55" data-end="08:35">
-      English 7:55-8:35<br>
-      <a href="https://meet.google.com/ien-iwbs-sfd" target="_blank">Join</a>
-    </div>
+    <div class="break">Break 8:35-9:00</div>
 
-    <div class="lesson">Break 8:35-9:00</div>
+    <div class="lesson">9:00-9:35 Arabic A<br><a href="https://meet.google.com/fhy-djsy-crv">A</a></div>
+    <div class="lesson">9:00-9:35 Arabic B<br><a href="https://meet.google.com/dav-rjjf-jva">B</a></div>
 
-    <div class="lesson" data-start="09:00" data-end="09:35">
-      Arabic 9:00-9:35<br>
-      A: <a href="https://meet.google.com/fhy-djsy-crv">Join A</a><br>
-      B: <a href="https://meet.google.com/dav-rjjf-jva">Join B</a>
-    </div>
+    <div class="break">9:35-9:45 Break</div>
 
-    <div class="lesson">Break 9:35-9:45</div>
+    <div class="lesson">9:45-10:25 Science<br><a href="http://meet.google.com/anc-aais-guy">Join</a></div>
 
-    <div class="lesson" data-start="09:45" data-end="10:25">
-      Science 9:45-10:25<br>
-      <a href="http://meet.google.com/anc-aais-guy">Join</a>
-    </div>
+    <div class="break">10:25-11:15 Break</div>
 
-    <div class="lesson">Break 10:25-11:15</div>
+    <div class="lesson">11:15-11:55 Math<br><a href="https://meet.google.com/qyh-oyzy-tic">Join</a></div>
+  </div>
 
-    <div class="lesson" data-start="11:15" data-end="11:55">
-      Math 11:15-11:55<br>
-      <a href="https://meet.google.com/qyh-oyzy-tic">Join</a>
-    </div>
+  <!-- WED THU -->
+  <div class="day">
+    <h2>Wednesday & Thursday</h2>
+
+    <div class="lesson">7:45-7:55 Morning Check-in<br><a href="https://meet.google.com/pse-eozg-hcx">Join</a></div>
+    <div class="lesson">7:55-8:35 English<br><a href="https://meet.google.com/ien-iwbs-sfd">Join</a></div>
+
+    <div class="break">8:35-9:00 Break</div>
+
+    <div class="lesson">9:00-9:35 Islamic A<br><a href="https://meet.google.com/zmq-xuta-omy">A</a></div>
+    <div class="lesson">9:00-9:35 Islamic B<br><a href="https://meet.google.com/xvc-uwdi-vqg">B</a></div>
+
+    <div class="break">9:35-9:45 Break</div>
+
+    <div class="lesson">9:45-10:25 Science<br><a href="http://meet.google.com/anc-aais-guy">Join</a></div>
+
+    <div class="break">10:25-11:15 Break</div>
+
+    <div class="lesson">11:15-11:55 Math<br><a href="https://meet.google.com/qyh-oyzy-tic">Join</a></div>
+  </div>
+
+  <!-- FRIDAY -->
+  <div class="day">
+    <h2>Friday</h2>
+
+    <div class="lesson">7:45-7:55 Check-in<br><a href="https://meet.google.com/pse-eozg-hcx">Join</a></div>
+    <div class="lesson">7:55-8:25 English<br><a href="https://meet.google.com/ien-iwbs-sfd">Join</a></div>
+
+    <div class="break">8:25-8:40 Break</div>
+
+    <div class="lesson">8:40-9:05 A.S.S A<br><a href="https://meet.google.com/yax-ypzr-djm">A</a></div>
+    <div class="lesson">8:40-9:05 A.S.S B<br><a href="https://meet.google.com/fcc-hudf-gxb">B</a></div>
+
+    <div class="break">9:05-9:15 Break</div>
+
+    <div class="lesson">9:15-10:00 Science</div>
+
+    <div class="break">10:00-10:10 Break</div>
+
+    <div class="lesson">10:10-10:35 Math<br><a href="https://meet.google.com/xkh-isqj-wao">Join</a></div>
   </div>
 
 </div>
 
 <script>
-/* ⏳ countdown + highlight */
-function timeToMin(t){
-  let [h,m]=t.split(":").map(Number);
-  return h*60+m;
+function snow(){
+  let s=document.createElement("div");
+  s.innerHTML="❄";
+  s.className="snowflake";
+  s.style.left=Math.random()*100+"vw";
+  s.style.animationDuration=(Math.random()*3+2)+"s";
+  document.body.appendChild(s);
+  setTimeout(()=>s.remove(),5000);
 }
-
-function update(){
-  let now=new Date();
-  let current=now.getHours()*60+now.getMinutes();
-
-  let lessons=document.querySelectorAll(".lesson");
-  let next=null;
-
-  lessons.forEach(l=>{
-    l.classList.remove("active","next");
-
-    let s=l.getAttribute("data-start");
-    let e=l.getAttribute("data-end");
-    if(!s||!e) return;
-
-    let start=timeToMin(s);
-    let end=timeToMin(e);
-
-    if(current>=start && current<=end){
-      l.classList.add("active");
-    }
-
-    if(start>current && !next){
-      next=l;
-    }
-  });
-
-  if(next){
-    next.classList.add("next");
-  }
-}
-
-setInterval(update,1000);
-update();
-
-/* ❄️ snow generator */
-function createSnow(){
-  const snow=document.createElement("div");
-  snow.classList.add("snowflake");
-  snow.innerHTML="❄";
-
-  snow.style.left=Math.random()*100+"vw";
-  snow.style.animationDuration=(Math.random()*3+2)+"s";
-  snow.style.fontSize=(Math.random()*10+10)+"px";
-
-  document.body.appendChild(snow);
-
-  setTimeout(()=>snow.remove(),5000);
-}
-
-setInterval(createSnow,200);
+setInterval(snow,200);
 </script>
 
 </body>
