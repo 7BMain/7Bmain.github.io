@@ -1,75 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>7B Hub</title>
+  <title>7B Website</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial;
+      background: #f2e6d9; /* light brown */
+    }
+
+    /* 🖤 TOP BAR */
+    .topbar {
+      background: black;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.5);
+    }
+
+    /* BUTTONS */
+    .nav {
+      display: flex;
+      gap: 10px;
+    }
+
+    .nav button {
+      background: #007bff;
+      border: none;
+      padding: 10px 14px;
       color: white;
-
-      /* 🖼️ background image */
-      background-image: url("IMG_1388.jpeg");
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-    }
-
-    /* dark overlay */
-    .overlay {
-      min-height: 100vh;
-      background: rgba(0,0,0,0.6);
-      padding: 20px;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 32px;
-      color: #007bff;
-      text-shadow: 0 0 15px #007bff;
-      margin-top: 20px;
-    }
-
-    .subtitle {
-      text-align: center;
-      opacity: 0.8;
-      margin-bottom: 30px;
-    }
-
-    /* button grid */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    .card {
-      background: rgba(0,0,0,0.5);
-      border: 1px solid #007bff;
-      border-radius: 12px;
-      padding: 15px;
-      text-align: center;
+      border-radius: 10px;
       cursor: pointer;
       transition: 0.3s;
-      box-shadow: 0 0 10px rgba(0,123,255,0.4);
+      box-shadow: 0 0 10px #007bff;
     }
 
-    .card:hover {
+    .nav button:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 20px #007bff;
+      background: #0056b3;
     }
 
-    .icon {
-      font-size: 28px;
-      margin-bottom: 10px;
+    /* LEFT SIDE LOGO AREA */
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 30px;
+      padding-left: 30px;
+    }
+
+    .logo-area img {
+      width: 90px;
+      height: 90px;
+      border-radius: 20px; /* rounded square */
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
     }
 
     .title {
-      font-size: 16px;
+      font-size: 24px;
       font-weight: bold;
+      color: #1a1a1a;
     }
 
   </style>
@@ -77,35 +71,23 @@
 
 <body>
 
-<div class="overlay">
+<!-- 🖤 TOP BAR -->
+<div class="topbar">
 
-  <h1>📘 7B Class Hub</h1>
-  <div class="subtitle">Your school dashboard</div>
-
-  <div class="grid">
-
-    <div class="card" onclick="location.href='timetable.html'">
-      <div class="icon">📅</div>
-      <div class="title">Timetable</div>
-    </div>
-
-    <div class="card" onclick="location.href='discord.html'">
-      <div class="icon">💬</div>
-      <div class="title">Discord</div>
-    </div>
-
-    <div class="card" onclick="location.href='about.html'">
-      <div class="icon">ℹ️</div>
-      <div class="title">About Us</div>
-    </div>
-
-    <div class="card" onclick="location.href='status.html'">
-      <div class="icon">📢</div>
-      <div class="title">Online Status</div>
-    </div>
-
+  <div class="nav">
+    <button onclick="location.href='index.html'">Home</button>
+    <button onclick="location.href='discord.html'">Discord</button>
+    <button onclick="location.href='about.html'">About Us</button>
+    <button onclick="location.href='timetable.html'">Timetable</button>
+    <button onclick="location.href='status.html'">Online Status</button>
   </div>
 
+</div>
+
+<!-- 🖼️ LOGO + TITLE -->
+<div class="logo-area">
+  <img src="6A45FB73-2101-4900-80C9-940224C8B634.png" alt="logo">
+  <div class="title">7B Website page</div>
 </div>
 
 </body>
