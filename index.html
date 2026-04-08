@@ -7,63 +7,69 @@
     body {
       margin: 0;
       font-family: Arial;
-      background: #f2e6d9; /* light brown */
+
+      /* 🎨 BACKGROUND IMAGE */
+      background: url("YOUR_BACKGROUND.jpg") no-repeat center center fixed;
+      background-size: cover;
     }
 
-    /* 🖤 TOP BAR */
+    /* 🖤 BIG TOP BAR */
     .topbar {
-      background: black;
-      height: 70px;
+      background: rgba(0,0,0,0.85);
+      height: 100px; /* bigger bar */
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 20px;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.5);
+      padding: 0 25px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.6);
+      backdrop-filter: blur(6px);
     }
 
-    /* BUTTONS */
+    /* NAV BUTTONS */
     .nav {
       display: flex;
-      gap: 10px;
+      gap: 12px;
     }
 
     .nav button {
       background: #007bff;
       border: none;
-      padding: 10px 14px;
+      padding: 12px 16px;
       color: white;
-      border-radius: 10px;
+      border-radius: 12px;
       cursor: pointer;
       transition: 0.3s;
-      box-shadow: 0 0 10px #007bff;
+      box-shadow: 0 0 12px #007bff;
+      font-size: 14px;
     }
 
     .nav button:hover {
-      transform: scale(1.05);
+      transform: scale(1.08);
       background: #0056b3;
     }
 
-    /* LEFT SIDE LOGO AREA */
+    /* 🖼️ LOGO SECTION */
     .logo-area {
       display: flex;
       align-items: center;
-      gap: 15px;
-      margin-top: 30px;
+      gap: 18px;
+      margin-top: 40px;
       padding-left: 30px;
     }
 
     .logo-area img {
-      width: 90px;
-      height: 90px;
-      border-radius: 20px; /* rounded square */
+      width: 100px;
+      height: 100px;
+      border-radius: 18px;
       object-fit: cover;
-      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
     }
 
     .title {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: bold;
-      color: #1a1a1a;
+      color: white;
+      text-shadow: 0 0 10px black;
     }
 
   </style>
@@ -84,7 +90,7 @@
 
 </div>
 
-<!-- 🖼️ LOGO + TITLE -->
+<!-- 🖼️ LOGO -->
 <div class="logo-area">
   <img src="6A45FB73-2101-4900-80C9-940224C8B634.png" alt="logo">
   <div class="title">7B Website page</div>
