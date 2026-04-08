@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>7B Timetable</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background-color: #c8a27a;
+      color: white;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 15px;
+      color: #007bff;
+      text-shadow: 0 0 10px #007bff;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      background: rgba(0,0,0,0.75);
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px;
+      z-index: 999;
+    }
+
+    .topbar a {
+      color: white;
+      text-decoration: none;
+      background: #007bff;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      box-shadow: 0 0 8px #007bff;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .day {
+      background: rgba(0,0,0,0.4);
+      padding: 15px;
+      border-radius: 12px;
+    }
+
+    .day h2 {
+      text-align: center;
+      color: #00bfff;
+    }
+
+    .lesson {
+      background: #007bff;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 14px;
+      box-shadow: 0 0 6px #007bff;
+      transition: 0.3s;
+    }
+
+    .lesson a {
+      color: white;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .active {
+      background: #00c853 !important;
+      box-shadow: 0 0 12px #00c853 !important;
+    }
+
+    .next {
+      background: #ff9800 !important;
+      box-shadow: 0 0 12px #ff9800 !important;
+    }
+
+    .timer {
+      text-align: center;
+      margin: 10px;
+      font-size: 14px;
+    }
+
+    .homebtn {
+      display: block;
+      text-align: center;
+      margin: 10px auto;
+      width: 120px;
+      padding: 10px;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #007bff;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>📅 7B Timetable</h1>
+
+<a class="homebtn" href="index.html">🏠 Home</a>
+
+<div class="timer" id="countdown">Loading next lesson...</div>
+
+<div class="topbar">
+  <a href="#mon">Mon/Tue</a>
+  <a href="#wed">Wed/Thu</a>
+  <a href="#fri">Fri</a>
+</div>
+
+<div class="container">
+
+  <!-- MONDAY / TUESDAY -->
+  <div class="day" id="mon">
+    <h2>Monday & Tuesday</h2>
+
+    <div class="lesson" data-start="07:45" data-end="07:55">
+      Morning Check-in<br>
+      <a href="https://meet.google.com/pse-eozg-hcx" target="_blank">Join</a>
+    </div>
+
+    <div class="lesson" data-start="07:55" data-end="08:35">
+      English<br>
+      <a href="https://meet.google.com/ien-iwbs-sfd" target="_blank">Join</a>
+    </div>
+
+    <div class="lesson">Break 8:35-9:00</div>
+
+    <div class="lesson" data-start="09:00" data-end="09:35">
+      Arabic A / B<br>
+      A: <a href="https://meet.google.com/fhy-djsy-crv" target="_blank">Join</a><br>
+      B: <a href="https://meet.google.com/dav-rjjf-jva" target="_blank">Join</a>
+    </div>
+
+    <div class="lesson">Break 9:35-9:45</div>
+
+    <div class="lesson" data-start="09:45" data-end="10:25">
+      Science<br>
+      <a href="http://meet.google.com/anc-aais-guy" target="_blank">Join</a><br>
+      Mr. Sylver ends early
+    </div>
+
+    <div class="lesson">Break 10:25-11:15</div>
+
+    <div class="lesson" data-start="11:15" data-end="11:55">
+      Math<br>
+      <a href="https://meet.google.com/qyh-oyzy-tic" target="_blank">Join</a>
+    </div>
+  </div>
+
+  <!-- WEDNESDAY / THURSDAY -->
+  <div class="day" id="wed">
+    <h2>Wednesday & Thursday</h2>
+
+    <div class="lesson" data-start="07:45" data-end="07:55">
+      Morning Check-in<br>
+      <a href="https://meet.google.com/pse-eozg-hcx" target="_blank">Join</a>
+    </div>
+
+    <div class="lesson" data-start="07:55" data-end="08:35">
+      English<br>
+      <a href="https://meet.google.com/ien-iwbs-sfd" target="_blank">Join</a>
+    </div>
+
+    <div class="lesson">Break 8:35-9:00</div>
+
+    <div class="lesson" data-start="09:00" data-end="09:35">
+      Islamic A / B<br>
+      A: <a href="https://meet.google.com/zmq-xuta-omy" target="_blank">Join</a><br>
+      B: <a href="https://meet.google.com/xvc-uwdi-vqg" target="_blank">Join</a>
+    </div>
+
+    <div class="lesson">Break 9:35-9:45</div>
+
+    <div class="lesson" data-start="09:45" data-end="10:25">
+      Science<br>
+      <a href="http://meet.google.com/anc-aais-guy" target="_blank">Join</a>
+    </div>
+
+    <div class="lesson">Break 10:25-11:15</div>
+
+    <div class="lesson" data-start="11:15" data-end="11:55">
+      Math<br>
+      <a href="https://meet.google.com/qyh-oyzy-tic" target="_blank">Join</a>
+    </div>
+  </div>
+
+  <!-- FRIDAY -->
+  <div class="day" id="fri">
+    <h2>Friday</h2>
+
+    <div class="lesson" data-start="07:45" data-end="07:55">
+      Morning Check-in<br>
+      <a href="https://meet.google.com/pse-eozg-hcx" target="_blank">Join</a>
+    </div>
+
+    <div class="lesson" data-start="07:55" data-end="08:25">
+      English<br>
+      <a href="https://meet.google.com/ien-iwbs-sfd" target="_blank">Join</a>
+    </div>
+
+    <div class="lesson">Break 08:25-08:40</div>
+
+    <div class="lesson" data-start="08:40" data-end="09:05">
+      A.S.S A / B<br>
+      A: <a href="https://meet.google.com/yax-ypzr-djm" target="_blank">Join</a><br>
+      B: <a href="https://meet.google.com/fcc-hudf-gxb" target="_blank">Join</a>
+    </div>
+
+    <div class="lesson">Break 09:05-09:15</div>
+
+    <div class="lesson" data-start="09:15" data-end="10:00">
+      Science
+    </div>
+
+    <div class="lesson">Break 10:00-10:10</div>
+
+    <div class="lesson" data-start="10:10" data-end="10:35">
+      Math<br>
+      <a href="https://meet.google.com/xkh-isqj-wao" target="_blank">Join</a>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function timeToMinutes(t) {
+  let [h,m] = t.split(":").map(Number);
+  return h*60 + m;
+}
+
+function update() {
+  const now = new Date();
+  const current = now.getHours()*60 + now.getMinutes();
+
+  let lessons = document.querySelectorAll(".lesson");
+  let next = null;
+
+  lessons.forEach(l => {
+    l.classList.remove("active","next");
+
+    let s = l.getAttribute("data-start");
+    let e = l.getAttribute("data-end");
+    if (!s || !e) return;
+
+    let start = timeToMinutes(s);
+    let end = timeToMinutes(e);
+
+    if (current >= start && current <= end) {
+      l.classList.add("active");
+    }
+
+    if (start > current && !next) {
+      next = l;
+    }
+  });
+
+  if (next) {
+    next.classList.add("next");
+
+    let diff = timeToMinutes(next.getAttribute("data-start")) - current;
+
+    document.getElementById("countdown").innerText =
+      "⏳ Next lesson in " + Math.floor(diff/60) + "h " + (diff%60) + "m";
+  }
+}
+
+setInterval(update, 1000);
+update();
+</script>
+
+</body>
+</html>
