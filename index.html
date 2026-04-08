@@ -8,68 +8,71 @@
       margin: 0;
       font-family: Arial;
 
-      /* 🎨 BACKGROUND IMAGE */
-      background: url("YOUR_BACKGROUND.jpg") no-repeat center center fixed;
+      /* 🎨 BACKGROUND */
+      background: url("IMG_1388.jpeg") no-repeat center center fixed;
       background-size: cover;
     }
 
-    /* 🖤 BIG TOP BAR */
+    /* 🖤 TOP BAR */
     .topbar {
       background: rgba(0,0,0,0.85);
-      height: 100px; /* bigger bar */
+      height: 110px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 25px;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.6);
       backdrop-filter: blur(6px);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.6);
     }
 
-    /* NAV BUTTONS */
+    /* NAV */
     .nav {
       display: flex;
       gap: 12px;
     }
 
+    /* ⚪ WHITE BUTTONS */
     .nav button {
-      background: #007bff;
+      background: white;
+      color: black;
       border: none;
-      padding: 12px 16px;
-      color: white;
+      padding: 12px 18px;
       border-radius: 12px;
       cursor: pointer;
+      font-size: 15px;
       transition: 0.3s;
-      box-shadow: 0 0 12px #007bff;
-      font-size: 14px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.5);
     }
 
     .nav button:hover {
       transform: scale(1.08);
-      background: #0056b3;
+      background: #e6e6e6;
     }
 
-    /* 🖼️ LOGO SECTION */
+    /* LOGO AREA */
     .logo-area {
       display: flex;
       align-items: center;
-      gap: 18px;
-      margin-top: 40px;
+      gap: 25px;
+      margin-top: 50px;
       padding-left: 30px;
     }
 
+    /* 📈 BIG LOGO */
     .logo-area img {
-      width: 100px;
-      height: 100px;
-      border-radius: 18px;
+      width: 160px;
+      height: 160px;
+      border-radius: 25px;
       object-fit: cover;
-      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      box-shadow: 0 0 25px rgba(0,0,0,0.7);
     }
 
+    /* 📈 BIG TITLE */
     .title {
-      font-size: 28px;
+      font-size: 48px;
       font-weight: bold;
       color: white;
-      text-shadow: 0 0 10px black;
+      text-shadow: 0 0 15px black;
     }
 
   </style>
@@ -90,7 +93,7 @@
 
 </div>
 
-<!-- 🖼️ LOGO -->
+<!-- 🖼️ LOGO + TITLE -->
 <div class="logo-area">
   <img src="6A45FB73-2101-4900-80C9-940224C8B634.png" alt="logo">
   <div class="title">7B Website page</div>
