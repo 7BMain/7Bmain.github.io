@@ -1,11 +1,63 @@
-<button onclick="location.href='timetable.html'">Timetable</button>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>7B Hub</title>
 
-<button onclick="location.href='https://discord.gg/YOUR-LINK'">
-  Discord
-</button>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      color: white;
 
-<button onclick="location.href='about.html'">About Us</button>
+      /* 🖼️ BACKGROUND IMAGE */
+      background-image: url("IMG_1388.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
 
-<button onclick="location.href='status.html'">
-  Online School Status
-</button>
+    .overlay {
+      background: rgba(0,0,0,0.5);
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #007bff;
+      text-shadow: 0 0 10px #007bff;
+    }
+
+    button {
+      display: block;
+      margin: 10px auto;
+      width: 220px;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #007bff;
+      color: white;
+      box-shadow: 0 0 10px #007bff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+  <h1>📘 7B Class Hub</h1>
+
+  <button onclick="location.href='timetable.html'">📅 Timetable</button>
+
+  <button onclick="location.href='discord.html'">💬 Discord</button>
+
+  <button onclick="location.href='about.html'">ℹ️ About Us</button>
+
+  <button onclick="location.href='status.html'">📢 Status</button>
+
+</div>
+
+</body>
+</html>
