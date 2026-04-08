@@ -1,48 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Discord - 7B</title>
+  <title>7B Discord</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial;
-      background-color: #c8a27a; /* light brown */
+      background: #0b0f1a;
+      color: white;
+      overflow: hidden;
+    }
+
+    /* ⭐ STAR BACKGROUND */
+    .star {
+      position: fixed;
+      width: 2px;
+      height: 2px;
+      background: white;
+      opacity: 0.6;
+      animation: float 6s linear infinite;
+    }
+
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(100vh); }
+    }
+
+    /* HEADER */
+    h1 {
+      text-align: center;
+      color: #4db8ff;
+      text-shadow: 0 0 15px #4db8ff;
+      margin-top: 20px;
+    }
+
+    /* HOME BUTTON */
+    .home {
+      display: block;
+      width: 120px;
+      margin: 10px auto;
+      padding: 10px;
+      background: #1a73e8;
       color: white;
       text-align: center;
-    }
-
-    .container {
-      padding: 60px;
-    }
-
-    h1 {
-      color: #007bff;
-      text-shadow: 0 0 10px #007bff;
-    }
-
-    .box {
-      background: rgba(0,0,0,0.4);
-      padding: 20px;
       border-radius: 10px;
-      display: inline-block;
-      max-width: 600px;
+      text-decoration: none;
+      box-shadow: 0 0 15px #1a73e8;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 22px;
-      background: #007bff;
+    /* MAIN BOX */
+    .box {
+      width: 80%;
+      margin: auto;
+      margin-top: 30px;
+      padding: 20px;
+      background: rgba(20, 30, 50, 0.7);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 150, 255, 0.4);
+      backdrop-filter: blur(6px);
+    }
+
+    /* DISCORD LINK */
+    .discord-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #1a1f33;
+      padding: 15px;
+      border-radius: 12px;
+      margin-top: 15px;
+      box-shadow: 0 0 15px #1a73e8;
+    }
+
+    .discord-link a {
       color: white;
       text-decoration: none;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #007bff;
-      transition: 0.3s;
+      background: #5865F2;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-weight: bold;
     }
 
-    .btn:hover {
-      box-shadow: 0 0 20px #00bfff;
+    .discord-link a:hover {
+      background: #4752c4;
+    }
+
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+    }
+
+    /* ABOUT TEXT */
+    .about {
+      margin-top: 20px;
+      line-height: 1.6;
+      font-size: 14px;
+      color: #d0e6ff;
     }
 
   </style>
@@ -50,24 +105,50 @@
 
 <body>
 
-  <div class="container">
+<h1>💙 7B Discord Server</h1>
 
-    <h1>7B Discord Server</h1>
+<a class="home" href="index.html">🏠 Home</a>
 
-    <div class="box">
-      <p>Welcome to the official 7B Discord server.</p>
-      <p>This server is used for school updates, communication, and gaming.</p>
+<div class="box">
 
-      <a class="btn" href="https://discord.gg/yJ6M3htxWq" target="_blank">
-        Join Discord
-      </a>
+  <h2>🔗 Join Discord</h2>
 
-      <br><br>
-
-      <a class="btn" href="index.html">⬅ Back to Home</a>
-    </div>
-
+  <div class="discord-link">
+    <img src="IMG_1388.jpeg" alt="discord">
+    <a href="https://discord.gg/yJ6M3htxWq" target="_blank">Join Server</a>
   </div>
+
+  <div class="about">
+    <h3>📘 About Us</h3>
+
+    This is a Discord Server for the class 7B.<br><br>
+
+    This server is intended strictly for educational purposes and gaming. Any form of cheating or direct sharing of answers is not allowed. The goal is to help students understand topics, not give direct answers.<br><br>
+
+    We may share updates related to Google Classroom due to delayed notifications.<br><br>
+
+    We are not responsible for conflicts between students. All members agree to follow the rules when joining.<br><br>
+
+    This server is actively moderated to ensure safety and fairness.
+  </div>
+
+</div>
+
+<script>
+/* ⭐ STAR GENERATOR */
+function star(){
+  let s=document.createElement("div");
+  s.className="star";
+  s.style.left=Math.random()*100+"vw";
+  s.style.top="-10px";
+  s.style.animationDuration=(Math.random()*5+3)+"s";
+  document.body.appendChild(s);
+
+  setTimeout(()=>s.remove(),8000);
+}
+
+setInterval(star,120);
+</script>
 
 </body>
 </html>
