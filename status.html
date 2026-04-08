@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online School Status</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background-color: #c8a27a;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 20px;
+      color: #007bff;
+      text-shadow: 0 0 10px #007bff;
+    }
+
+    .box {
+      margin: 40px auto;
+      width: 80%;
+      max-width: 600px;
+      background: rgba(0,0,0,0.4);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #007bff;
+    }
+
+    .news {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .countdown {
+      font-size: 22px;
+      color: #00bfff;
+      margin-top: 15px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 15px;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #007bff;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>📢 Online School Status</h1>
+
+<div class="box">
+  <div class="news">
+    🇦🇪 UAE government extended online school until <b>17 April 2026</b>.<br><br>
+    Latest updates will be posted here.
+  </div>
+
+  <div class="countdown" id="countdown">
+    Loading countdown...
+  </div>
+
+  <a class="back" href="index.html">⬅ Back Home</a>
+</div>
+
+<script>
+function updateCountdown() {
+  const target = new Date("April 17, 2026 00:00:00").getTime();
+  const now = new Date().getTime();
+
+  const diff = target - now;
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+  document.getElementById("countdown").innerHTML =
+    "⏳ Time left: " + days + " days " + hours + " hours " + minutes + " minutes";
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
+
+</body>
+</html>
