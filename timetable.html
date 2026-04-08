@@ -7,36 +7,51 @@
     body {
       margin: 0;
       font-family: Arial;
-      background-color: #c8a27a;
       color: white;
+      overflow-x: hidden;
+
+      background: #1b1b2f;
+    }
+
+    /* ❄️ SNOW EFFECT */
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      color: white;
+      font-size: 1em;
+      animation: fall linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+      }
     }
 
     h1 {
       text-align: center;
       padding: 15px;
-      color: #007bff;
-      text-shadow: 0 0 10px #007bff;
+      color: #00bfff;
+      text-shadow: 0 0 10px #00bfff;
     }
 
-    .topbar {
-      position: sticky;
-      top: 0;
-      background: rgba(0,0,0,0.75);
-      display: flex;
-      justify-content: center;
-      gap: 10px;
+    .homebtn {
+      display: block;
+      width: 120px;
+      margin: auto;
       padding: 10px;
-      z-index: 999;
+      background: #007bff;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #007bff;
     }
 
-    .topbar a {
-      color: white;
-      text-decoration: none;
-      background: #007bff;
-      padding: 6px 10px;
-      border-radius: 6px;
-      font-size: 12px;
-      box-shadow: 0 0 8px #007bff;
+    .timer {
+      text-align: center;
+      margin: 10px;
     }
 
     .container {
@@ -47,9 +62,10 @@
     }
 
     .day {
-      background: rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.5);
       padding: 15px;
       border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,123,255,0.3);
     }
 
     .day h2 {
@@ -63,220 +79,130 @@
       padding: 10px;
       border-radius: 8px;
       font-size: 14px;
-      box-shadow: 0 0 6px #007bff;
       transition: 0.3s;
     }
 
     .lesson a {
       color: white;
       font-weight: bold;
-      text-decoration: underline;
     }
 
     .active {
       background: #00c853 !important;
-      box-shadow: 0 0 12px #00c853 !important;
     }
 
     .next {
       background: #ff9800 !important;
-      box-shadow: 0 0 12px #ff9800 !important;
-    }
-
-    .timer {
-      text-align: center;
-      margin: 10px;
-      font-size: 14px;
-    }
-
-    .homebtn {
-      display: block;
-      text-align: center;
-      margin: 10px auto;
-      width: 120px;
-      padding: 10px;
-      background: #007bff;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #007bff;
     }
   </style>
 </head>
 
 <body>
 
-<h1>📅 7B Timetable</h1>
+<h1>📅 7B Timetable ❄️</h1>
 
 <a class="homebtn" href="index.html">🏠 Home</a>
 
-<div class="timer" id="countdown">Loading next lesson...</div>
-
-<div class="topbar">
-  <a href="#mon">Mon/Tue</a>
-  <a href="#wed">Wed/Thu</a>
-  <a href="#fri">Fri</a>
-</div>
+<div class="timer" id="countdown">Loading...</div>
 
 <div class="container">
 
-  <!-- MONDAY / TUESDAY -->
-  <div class="day" id="mon">
+  <!-- MON / TUE -->
+  <div class="day">
     <h2>Monday & Tuesday</h2>
 
     <div class="lesson" data-start="07:45" data-end="07:55">
-      Morning Check-in<br>
+      Morning Check-in 7:45-7:55<br>
       <a href="https://meet.google.com/pse-eozg-hcx" target="_blank">Join</a>
     </div>
 
     <div class="lesson" data-start="07:55" data-end="08:35">
-      English<br>
+      English 7:55-8:35<br>
       <a href="https://meet.google.com/ien-iwbs-sfd" target="_blank">Join</a>
     </div>
 
     <div class="lesson">Break 8:35-9:00</div>
 
     <div class="lesson" data-start="09:00" data-end="09:35">
-      Arabic A / B<br>
-      A: <a href="https://meet.google.com/fhy-djsy-crv" target="_blank">Join</a><br>
-      B: <a href="https://meet.google.com/dav-rjjf-jva" target="_blank">Join</a>
+      Arabic 9:00-9:35<br>
+      A: <a href="https://meet.google.com/fhy-djsy-crv">Join A</a><br>
+      B: <a href="https://meet.google.com/dav-rjjf-jva">Join B</a>
     </div>
 
     <div class="lesson">Break 9:35-9:45</div>
 
     <div class="lesson" data-start="09:45" data-end="10:25">
-      Science<br>
-      <a href="http://meet.google.com/anc-aais-guy" target="_blank">Join</a><br>
-      Mr. Sylver ends early
+      Science 9:45-10:25<br>
+      <a href="http://meet.google.com/anc-aais-guy">Join</a>
     </div>
 
     <div class="lesson">Break 10:25-11:15</div>
 
     <div class="lesson" data-start="11:15" data-end="11:55">
-      Math<br>
-      <a href="https://meet.google.com/qyh-oyzy-tic" target="_blank">Join</a>
-    </div>
-  </div>
-
-  <!-- WEDNESDAY / THURSDAY -->
-  <div class="day" id="wed">
-    <h2>Wednesday & Thursday</h2>
-
-    <div class="lesson" data-start="07:45" data-end="07:55">
-      Morning Check-in<br>
-      <a href="https://meet.google.com/pse-eozg-hcx" target="_blank">Join</a>
-    </div>
-
-    <div class="lesson" data-start="07:55" data-end="08:35">
-      English<br>
-      <a href="https://meet.google.com/ien-iwbs-sfd" target="_blank">Join</a>
-    </div>
-
-    <div class="lesson">Break 8:35-9:00</div>
-
-    <div class="lesson" data-start="09:00" data-end="09:35">
-      Islamic A / B<br>
-      A: <a href="https://meet.google.com/zmq-xuta-omy" target="_blank">Join</a><br>
-      B: <a href="https://meet.google.com/xvc-uwdi-vqg" target="_blank">Join</a>
-    </div>
-
-    <div class="lesson">Break 9:35-9:45</div>
-
-    <div class="lesson" data-start="09:45" data-end="10:25">
-      Science<br>
-      <a href="http://meet.google.com/anc-aais-guy" target="_blank">Join</a>
-    </div>
-
-    <div class="lesson">Break 10:25-11:15</div>
-
-    <div class="lesson" data-start="11:15" data-end="11:55">
-      Math<br>
-      <a href="https://meet.google.com/qyh-oyzy-tic" target="_blank">Join</a>
-    </div>
-  </div>
-
-  <!-- FRIDAY -->
-  <div class="day" id="fri">
-    <h2>Friday</h2>
-
-    <div class="lesson" data-start="07:45" data-end="07:55">
-      Morning Check-in<br>
-      <a href="https://meet.google.com/pse-eozg-hcx" target="_blank">Join</a>
-    </div>
-
-    <div class="lesson" data-start="07:55" data-end="08:25">
-      English<br>
-      <a href="https://meet.google.com/ien-iwbs-sfd" target="_blank">Join</a>
-    </div>
-
-    <div class="lesson">Break 08:25-08:40</div>
-
-    <div class="lesson" data-start="08:40" data-end="09:05">
-      A.S.S A / B<br>
-      A: <a href="https://meet.google.com/yax-ypzr-djm" target="_blank">Join</a><br>
-      B: <a href="https://meet.google.com/fcc-hudf-gxb" target="_blank">Join</a>
-    </div>
-
-    <div class="lesson">Break 09:05-09:15</div>
-
-    <div class="lesson" data-start="09:15" data-end="10:00">
-      Science
-    </div>
-
-    <div class="lesson">Break 10:00-10:10</div>
-
-    <div class="lesson" data-start="10:10" data-end="10:35">
-      Math<br>
-      <a href="https://meet.google.com/xkh-isqj-wao" target="_blank">Join</a>
+      Math 11:15-11:55<br>
+      <a href="https://meet.google.com/qyh-oyzy-tic">Join</a>
     </div>
   </div>
 
 </div>
 
 <script>
-function timeToMinutes(t) {
-  let [h,m] = t.split(":").map(Number);
-  return h*60 + m;
+/* ⏳ countdown + highlight */
+function timeToMin(t){
+  let [h,m]=t.split(":").map(Number);
+  return h*60+m;
 }
 
-function update() {
-  const now = new Date();
-  const current = now.getHours()*60 + now.getMinutes();
+function update(){
+  let now=new Date();
+  let current=now.getHours()*60+now.getMinutes();
 
-  let lessons = document.querySelectorAll(".lesson");
-  let next = null;
+  let lessons=document.querySelectorAll(".lesson");
+  let next=null;
 
-  lessons.forEach(l => {
+  lessons.forEach(l=>{
     l.classList.remove("active","next");
 
-    let s = l.getAttribute("data-start");
-    let e = l.getAttribute("data-end");
-    if (!s || !e) return;
+    let s=l.getAttribute("data-start");
+    let e=l.getAttribute("data-end");
+    if(!s||!e) return;
 
-    let start = timeToMinutes(s);
-    let end = timeToMinutes(e);
+    let start=timeToMin(s);
+    let end=timeToMin(e);
 
-    if (current >= start && current <= end) {
+    if(current>=start && current<=end){
       l.classList.add("active");
     }
 
-    if (start > current && !next) {
-      next = l;
+    if(start>current && !next){
+      next=l;
     }
   });
 
-  if (next) {
+  if(next){
     next.classList.add("next");
-
-    let diff = timeToMinutes(next.getAttribute("data-start")) - current;
-
-    document.getElementById("countdown").innerText =
-      "⏳ Next lesson in " + Math.floor(diff/60) + "h " + (diff%60) + "m";
   }
 }
 
-setInterval(update, 1000);
+setInterval(update,1000);
 update();
+
+/* ❄️ snow generator */
+function createSnow(){
+  const snow=document.createElement("div");
+  snow.classList.add("snowflake");
+  snow.innerHTML="❄";
+
+  snow.style.left=Math.random()*100+"vw";
+  snow.style.animationDuration=(Math.random()*3+2)+"s";
+  snow.style.fontSize=(Math.random()*10+10)+"px";
+
+  document.body.appendChild(snow);
+
+  setTimeout(()=>snow.remove(),5000);
+}
+
+setInterval(createSnow,200);
 </script>
 
 </body>
